@@ -39,3 +39,12 @@ Next-day return.
 Training/testing is chronological (70/30), not random, to avoid using future observations to train the model.
 
 This is an educational backtest/simulation, not a recommendation to trade real money.
+
+
+## next part
+
+correration between PPI and s&p 500 N: n+-14
+
+estimate the ts/sl
+
+

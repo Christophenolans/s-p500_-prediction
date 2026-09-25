@@ -2,6 +2,7 @@ from .matrix import Matrix, solve_gaussian
 from .stats import standardize
 from .eigen import top_eigenpairs
 from .features import read_csv, build_features
+from .merge_csv
 
 def fit_predict(path):
     rows=read_csv(path)
