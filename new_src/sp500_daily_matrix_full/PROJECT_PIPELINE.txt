@@ -1,0 +1,15 @@
+S&P 500 Daily OHLCV + FRED PPI
+ -> clean and align
+ -> 20 indicators
+ -> next-day return target
+ -> correlation
+ -> standardization
+ -> PCA (covariance/eigen/loadings)
+ -> SVD module
+ -> Gaussian / Gauss-Jordan / LU / Adjugate least squares
+ -> 7-year rolling adaptive training
+ -> daily predictions
+ -> MSE / MAE / Direction Accuracy / correlation
+ -> annual summary + plots
+
+Indicator 7-year mean-change forecast is reported separately because most technical indicators are derived from price and should not be treated as independent exogenous forecasts.
