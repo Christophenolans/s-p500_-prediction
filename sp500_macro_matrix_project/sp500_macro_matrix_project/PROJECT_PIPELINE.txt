@@ -1,0 +1,3 @@
+S&P500 DAILY -> FRED MACRO -> ALIGN -> FEATURE ENGINEERING -> STANDARDIZE -> PCA -> MATRIX REGRESSION -> 7-YEAR ADAPTIVE BACKTEST -> MSE/MAE/DIRECTION/CORRELATION
+Macro: Interest Rate, CPI, PPI, NFP, GDP, VIX, 10Y Bond, Productivity.
+Methods: Gaussian, Gauss-Jordan, LU, Adjugate, Least Squares, SVD.
