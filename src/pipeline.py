@@ -3,7 +3,6 @@ from .stats import standardize
 from .eigen import top_eigenpairs
 from .features import read_csv, build_features
 
-
 def fit_predict(path):
     rows=read_csv(path)
     data=build_features(rows)

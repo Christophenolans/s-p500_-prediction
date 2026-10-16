@@ -1,3 +1,4 @@
-from src.pipeline import write_result
-write_result("data/SPX500_1d.csv","result/predictions.csv")
-print("Finished. See result/predictions.csv and result/metrics.txt")
+from src.backtest import run_backtest
+
+if __name__ == "__main__":
+    run_backtest()
