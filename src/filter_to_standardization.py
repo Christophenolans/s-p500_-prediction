@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-output_dir = "result/test"
+output_dir = "result/standardization_data"
 os.makedirs(output_dir, exist_ok=True)
 
 data_folder = "data" 
