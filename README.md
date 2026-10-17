@@ -59,15 +59,19 @@ The investment simulation is long-only and all-in/all-out, allows fractional sha
 
 The provided normalized indicator columns may have been normalized independently within each seven-year output window, which can use information from the test year when scaling features. The code does not refit that normalization from raw indicators using training-only parameters. Therefore, these results are a **provisional historical simulation, not a fully leakage-free out-of-sample result**. Rebuild normalization using only the training window before relying on the result for research. The code does not connect to a broker and does not place actual trades.
 
-## Last run included in this package
+## Generated output files
 
-Using the included Horizon-1 files, the default run generated **4,694 daily predictions** for 2007-01-03 through 2025-08-29 (2025 is partial):
+This source package intentionally does **not** include pre-generated `result/` files. When you run `main.py`, the code creates the output directory and writes fresh results to `result/horizon1_backtest/`; it also writes the main historical prediction file to `result/predictions.csv`.
 
-- Simulated starting capital: **$10,000**
-- Strategy ending equity: **$26,751.19** (**+167.51%** total; about **5.42% CAGR**)
-- Buy-and-hold ending equity after estimated exit fee: **$64,304.63** (**+543.05%** total; about **10.49% CAGR**)
-- Strategy maximum drawdown: **-51.06%**
-- Buy-and-hold maximum drawdown: **-55.42%**
-- Position changes: **71**
+Generated files include:
 
-These are outputs of the included simulation, **not verified live-trading returns**. Due to the normalization limitation above, do not interpret them as leakage-free performance or as a promise of future results.
+- `predictions.csv`
+- `daily_backtest.csv`
+- `annual_summary.csv`
+- `overall_summary.csv`
+- `skipped_years.csv`
+- `README_RESULTS.txt`
+
+These files are created by the program at runtime and are not bundled in this ZIP.
+
+**Data-folder check:** inspect `data/` before rerunning. This archive may contain `results 1 horizon 14` folders rather than the required `results 1 horizon 1` folders. Do not rename Horizon-14 data to Horizon-1; the correct Horizon-1 CSVs must be supplied for a valid Horizon-1 rerun.

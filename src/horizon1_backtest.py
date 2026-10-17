@@ -61,6 +61,10 @@ def run_backtest(data_dir=DEFAULT_DATA_DIR, weight_file=DEFAULT_WEIGHT_FILE, out
     os.makedirs(out_dir, exist_ok=True)
     prediction_fields = ["train_window", "test_year", "date", "target_date", "open_price", "future_open_price", "score", "predicted_return_pct", "predicted_probability_up_pct", "calibration_samples", "prediction_method", "signal", "position", "actual_return_pct", "direction_correct"]
     write_csv(os.path.join(out_dir, "predictions.csv"), all_predictions, prediction_fields)
+    # Keep the conventional project-level prediction path in sync with the walk-forward run.
+    project_result_dir = os.path.join(ROOT, "result")
+    os.makedirs(project_result_dir, exist_ok=True)
+    write_csv(os.path.join(project_result_dir, "predictions.csv"), all_predictions, prediction_fields)
     daily_fields = prediction_fields + ["initial_capital_usd", "equity_before_trade_usd", "trade_cost_usd", "portfolio_equity_usd", "buy_hold_equity_usd", "fractional_shares_after_return_estimate", "daily_portfolio_return_pct", "drawdown_pct", "trade_event"]
     write_csv(os.path.join(out_dir, "daily_backtest.csv"), daily, daily_fields)
     write_csv(os.path.join(out_dir, "annual_summary.csv"), annual, ["year", "rows", "starting_equity_usd", "ending_equity_usd", "strategy_return_pct", "buy_hold_return_pct", "position_changes", "direction_accuracy_pct", "mean_predicted_return_pct", "mean_actual_return_pct"])
