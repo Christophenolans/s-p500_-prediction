@@ -7,6 +7,8 @@ def prepare_features_and_target(
     spy_path: str,
     data_dir: str,
     best_lags: dict,
+    start_year: int = None,
+    end_year: int = None,
     test_size: float = 0.2
 ):
     spy_df = pd.read_csv(spy_path)
@@ -32,6 +34,10 @@ def prepare_features_and_target(
         
         ind_series = pd.to_numeric(ind_df[val_col], errors='coerce').reindex(df_combined.index, method='ffill')
         df_combined[ind_name] = ind_series.shift(lag)
+
+    #  กรองเฉพาะกรอบปีที่ต้องการ (เช่น 2000-2006)
+    if start_year is not None and end_year is not None:
+        df_combined = df_combined.loc[f"{start_year}-01-01":f"{end_year}-12-31"]
 
     df_combined = df_combined.bfill().dropna()
 
