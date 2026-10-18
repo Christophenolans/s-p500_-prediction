@@ -7,9 +7,9 @@ from .horizon1_model import build_labeled_rows, fit_calibration, predict_rows
 from .portfolio import simulate_portfolio, annual_summary
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_DATA_DIR = os.path.join(ROOT, "data", "results 3 horizon 14")
+DEFAULT_DATA_DIR = os.path.join(ROOT, "data", "results 3 horizon 3")
 DEFAULT_WEIGHT_FILE = os.path.join(ROOT, "data", "weighted_correlation_lag3.csv")
-DEFAULT_OUT_DIR = os.path.join(ROOT, "result", "horizon314_backtest")
+DEFAULT_OUT_DIR = os.path.join(ROOT, "result", "horizon33_backtest")
 
 
 def run_backtest(data_dir=DEFAULT_DATA_DIR, weight_file=DEFAULT_WEIGHT_FILE, out_dir=DEFAULT_OUT_DIR,

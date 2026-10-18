@@ -1,13 +1,13 @@
 Metric,Strategy,Buy & Hold (Benchmark)
-Total Trading Days,3171,3171
-Period (Years),12.58,12.58
-Directional Accuracy (%),62.76%,-
-MAE (%),2.5687,-
-RMSE (%),3.7535,-
-Market Exposure (%),84.23%,100.00%
-Total Return (%),106732438046.25%,2092229250981.00%
-CAGR (%),421.77%,560.97%
-Annualized Volatility (%),50.04%,56.77%
-Sharpe Ratio,3.57,3.63
-Max Drawdown (%),-96.91%,-98.66%
-Win Rate (Active Trades %),68.44%,68.31%
+Total Trading Rows,3171.0,3171
+Period (Years),12.6051,12.6051
+Directional Accuracy (%),62.7562,-
+MAE (percentage points),2.568692,-
+RMSE (percentage points),3.753475,-
+Market Exposure (%),84.2321,100.0
+Total Return (%),275.8893,455.1396
+CAGR (%),11.0763,14.566
+Annualized Volatility (%),50.0375,16.4856
+Sharpe Ratio,3.5625,0.9095
+Max Drawdown (%),-26.2858,-32.049
+"Win Rate (Active Holding Periods, %)",68.4388,68.3065
