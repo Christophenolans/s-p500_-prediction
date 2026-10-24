@@ -7,9 +7,9 @@ from .horizon1_model import build_labeled_rows, fit_calibration, predict_rows
 from .portfolio import simulate_portfolio, annual_summary
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DEFAULT_DATA_DIR = os.path.join(ROOT, "data", "results 3 horizon 3")
+DEFAULT_DATA_DIR = os.path.join(ROOT, "data", "results 3 horizon 14")
 DEFAULT_WEIGHT_FILE = os.path.join(ROOT, "data", "weighted_correlation_lag3.csv")
-DEFAULT_OUT_DIR = os.path.join(ROOT, "result", "horizon33_backtest")
+DEFAULT_OUT_DIR = os.path.join(ROOT, "result", "horizon314_backtest")
 
 
 def run_backtest(data_dir=DEFAULT_DATA_DIR, weight_file=DEFAULT_WEIGHT_FILE, out_dir=DEFAULT_OUT_DIR,
@@ -97,9 +97,9 @@ def main():
     parser.add_argument("--data-dir", default=DEFAULT_DATA_DIR)
     parser.add_argument("--weight-file", default=DEFAULT_WEIGHT_FILE)
     parser.add_argument("--out-dir", default=DEFAULT_OUT_DIR)
-    parser.add_argument("--start-year", type=int, default=2007)
+    parser.add_argument("--start-year", type=int, default=2013)
     parser.add_argument("--end-year", type=int, default=2025)
-    parser.add_argument("--capital", type=float, default=10000.0)
+    parser.add_argument("--capital", type=float, default=100000.0)
     parser.add_argument("--cost-bps", type=float, default=5.0)
     parser.add_argument("--min-bin-count", type=int, default=10)
     parser.add_argument("--threshold-pct", type=float, default=0.0)

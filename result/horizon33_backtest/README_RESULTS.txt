@@ -1,6 +1,6 @@
 S&P 500 Horizon-1 Walk-Forward Prediction + Capital Backtest
 ===========================================================
-Test years requested: 2007-2025
+Test years requested: 2013-2025
 Prediction rows: 3182
 Initial capital: $10,000.00
 Transaction cost: 5 bps per position change
@@ -25,5 +25,3 @@ strategy_annualized_sharpe: 1.0894965373537153
 position_changes: 23
 profitable_days_pct: 45.945945945945944
 assumptions: Long-only, cash return 0%, fractional shares, 5 bps per entry/exit; benchmark includes estimated entry/exit fees; excludes taxes, dividends, and extra slippage. Simulation only.
-
-Skipped years: 6; see skipped_years.csv
